@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.step8Controller">
+    <children>
+        <Label text="ENSAMBLAJE DE SISTEMA GLOBAL">
+            <font>
+                <Font name="Calisto MT" size="36.0" />
+            </font>
+            <padding>
+                <Insets left="50.0" top="50.0" />
+            </padding>
+        </Label>
+        <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <children>
+                <MediaView fx:id="video" fitHeight="500.0" fitWidth="800.0">
+                    <StackPane.margin>
+                        <Insets left="400.0" />
+                    </StackPane.margin></MediaView>
+                <Label text="Finalmente aplicamos las condiciones que definimos al principio y nuestro sistema estará resuelto. Solo nos quedaría despejar la matriz de incógnitas (X=(K^-1)*b)." textAlignment="JUSTIFY" wrapText="true">
+                    <StackPane.margin>
+                        <Insets left="50.0" right="900.0" />
+                    </StackPane.margin>
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </StackPane>
+        <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#toStep7" styleClass="buttonGen" text="Anterior" />
+                <Button mnemonicParsing="false" onMouseClicked="#toStep8" styleClass="buttonGen" text="Siguiente" />
+            </children>
+            <padding>
+                <Insets right="25.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

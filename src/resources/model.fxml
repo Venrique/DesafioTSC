@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.modelController">
+   <children>
+      <Label text="DEFINICIÓN DE MODELO A UTILIZAR">
+         <font>
+            <Font name="Calisto MT" size="36.0" />
+         </font>
+         <padding>
+            <Insets left="50.0" top="50.0" />
+         </padding>
+      </Label>
+      <Label text="Antes de empezar necesitamos establecer un modelo. Un modelo es simplemente una abstracción de la realidad, o visto de otra forma, es una (o varias) fórmulas matemáticas que describen el comportamiento de cierto fenómeno. Para este ejemplo se utilizará el siguiente modelo ficticio en donde A y B son las incógnitas y, además, son variables escalares:" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="100.0" right="100.0" top="100.0" />
+         </VBox.margin>
+      </Label>
+      <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="324.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/model.JPG" />
+               </image>
+            </ImageView>
+            <Button id="tooltip" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" text="?">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="300.0" top="120.0" />
+               </StackPane.margin>
+               <tooltip>
+                  <Tooltip consumeAutoHidingEvents="false" prefWidth="400.0" text="El símbolo nabla (∇) hace referencia al gradiente. En este caso, una matriz 3x1 que contiene las derivadas parciales de X, Y y Z." wrapText="true" />
+               </tooltip>
+            </Button>
+         </children>
+      </StackPane>
+      <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#toIntro" styleClass="buttonGen" text="Anterior" />
+            <Button mnemonicParsing="false" onMouseClicked="#toDomain" styleClass="buttonGen" text="Siguiente" />
+         </children>
+         <padding>
+            <Insets right="25.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

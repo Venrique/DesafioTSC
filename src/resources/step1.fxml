@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.step1Controller">
+    <children>
+        <Label text="PASO 1 DEL MÉTODO DE LOS ELEMENTOS FINITOS">
+            <font>
+                <Font name="Calisto MT" size="36.0" />
+            </font>
+            <padding>
+                <Insets left="50.0" top="50.0" />
+            </padding>
+        </Label>
+        <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="El paso 1 del Método de los Elementos Finitos se llama Localización ya que es donde decidimos el elemento local con el que trabajaremos. En un caso real, al generar la malla esta seguramente sería irregular y sus elementos tendrían diferentes medidas por lo que se nos complicaría todo el proceso." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets bottom="300.0" left="50.0" right="100.0" />
+               </StackPane.margin>
+            </Label>
+            <Label text="Para solventar esto nuestro elemento local lo llevamos a una dimensión ideal donde tendrá una forma y medidas que nos convengan. En esta dimensión las coordenadas x, y, z serán reemplazadas por las coordenadas ε,η,ψ (épsilon, eta, psi)." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="50.0" right="700.0" top="150.0" />
+               </StackPane.margin>
+            </Label>
+            <ImageView fitHeight="283.0" fitWidth="590.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/Paso1.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets left="580.0" top="150.0" />
+               </StackPane.margin>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+        </StackPane>
+        <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#toTable" styleClass="buttonGen" text="Anterior" />
+                <Button mnemonicParsing="false" onMouseClicked="#toStep2" styleClass="buttonGen" text="Siguiente" />
+            </children>
+            <padding>
+                <Insets right="25.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.meshController">
+    <children>
+        <Label text="MALLA A UTILIZAR">
+            <font>
+                <Font name="Calisto MT" size="36.0" />
+            </font>
+            <padding>
+                <Insets left="50.0" top="50.0" />
+            </padding>
+        </Label>
+        <StackPane fx:id="meshContainer" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="En este caso el volumen a utilizar será un cubo y, para efectos de demostración, nuestra malla constará únicamente de 8 nodos (los vértices del cubo) y 6 elementos (6 tetraedros), sin embargo, al realizar simulaciones en la realidad es recomendable usar el mayor número posible de elementos ya que esto generará una mejor aproximación." textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="50.0" right="600.0" />
+               </StackPane.margin>
+            </Label>
+         </children></StackPane>
+        <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#toCondition" styleClass="buttonGen" text="Anterior" />
+                <Button mnemonicParsing="false" onMouseClicked="#toTable" styleClass="buttonGen" text="Siguiente" />
+            </children>
+            <padding>
+                <Insets right="25.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

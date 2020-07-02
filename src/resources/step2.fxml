@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.step2Controller">
+    <children>
+        <Label text="PASO 2 DEL MÉTODO DE LOS ELEMENTOS FINITOS">
+            <font>
+                <Font name="Calisto MT" size="36.0" />
+            </font>
+            <padding>
+                <Insets left="50.0" top="50.0" />
+            </padding>
+        </Label>
+        <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+         <children>
+            <Label text="El paso 2 se llama interpolación y empezamos por asumir que conocemos las respuestas de las incógnitas en los nodos. Para un elemento conectado a los nodos “a” y “b” los valores de la solución a lo largo de ese elemento están dados por la interpolación entre esos nodos usando alguna función. A estas funciones las llamamos Funciones de Forma." textAlignment="JUSTIFY" wrapText="true">
+               <StackPane.margin>
+                  <Insets left="50.0" right="600.0" />
+               </StackPane.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="365.0" fitWidth="501.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imgs/Paso2Funciones.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets left="700.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Button id="tooltip" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" text="?">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <tooltip>
+                  <Tooltip consumeAutoHidingEvents="false" prefWidth="400.0" text="Puedes usar estos botones para navegar entre distintas secciones del mismo paso." wrapText="true" />
+               </tooltip>
+               <StackPane.margin>
+                  <Insets right="880.0" top="450.0" />
+               </StackPane.margin>
+            </Button>
+             <Button id="tooltip" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" scaleShape="false" text="?">
+                 <font>
+                     <Font name="System Bold" size="18.0" />
+                 </font>
+                 <StackPane.margin>
+                     <Insets left="350.0" top="340.0" />
+                 </StackPane.margin>
+                 <tooltip>
+                     <Tooltip consumeAutoHidingEvents="false" prefWidth="400.0" text="Usamos 4 funciones de forma ya que cada elemento posee 4 nodos." wrapText="true" />
+                 </tooltip>
+             </Button>
+            <Button fx:id="uno" mnemonicParsing="false" onMouseClicked="#one" text="1">
+               <StackPane.margin>
+                  <Insets right="1100.0" top="450.0" />
+               </StackPane.margin>
+            </Button>
+            <Button fx:id="dos" mnemonicParsing="false" onMouseClicked="#two" text="2">
+               <StackPane.margin>
+                  <Insets right="1000.0" top="450.0" />
+               </StackPane.margin>
+            </Button>
+         </children>
+        </StackPane>
+        <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#toStep1" styleClass="buttonGen" text="Anterior" />
+                <Button mnemonicParsing="false" onMouseClicked="#toStep3" styleClass="buttonGen" text="Siguiente" />
+            </children>
+            <padding>
+                <Insets right="25.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

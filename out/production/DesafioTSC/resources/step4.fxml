@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.step4Controller">
+    <children>
+        <Label text="PASO 4 DEL MÉTODO DE LOS ELEMENTOS FINITOS">
+            <font>
+                <Font name="Calisto MT" size="36.0" />
+            </font>
+            <padding>
+                <Insets left="50.0" top="50.0" />
+            </padding>
+        </Label>
+        <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <children>
+                <ImageView fitHeight="365.0" fitWidth="501.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imgs/paso4.png" />
+                    </image>
+                    <StackPane.margin>
+                        <Insets left="700.0" />
+                    </StackPane.margin>
+                </ImageView>
+                <Label text="El paso 4 tiene como nombre “método de los residuos ponderados”. Para que la integral dé como resultado 0 necesitamos valores que nos hagan 0 dicha integral, esos valores reciben el nombre de pesos. Ya que en este caso nuestro elemento local tiene 4 nodos significa que hay 4 incógnitas de A y B, eso significa que para resolver el sistema necesitamos 4 ecuaciones, por ello nuestro peso será una matriz 4x1 con 4 funciones de peso dentro." textAlignment="JUSTIFY" wrapText="true">
+                    <StackPane.margin>
+                        <Insets left="50.0" right="600.0" />
+                    </StackPane.margin>
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+            </children>
+        </StackPane>
+        <HBox id="footer" alignment="CENTER_RIGHT" fillHeight="false" prefHeight="100.0" prefWidth="1280.0" spacing="50.0">
+            <children>
+                <Button mnemonicParsing="false" onMouseClicked="#toStep3" styleClass="buttonGen" text="Anterior" />
+                <Button mnemonicParsing="false" onMouseClicked="#toStep5" styleClass="buttonGen" text="Siguiente" />
+            </children>
+            <padding>
+                <Insets right="25.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

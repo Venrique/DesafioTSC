@@ -1,0 +1,35 @@
+/*#7EB791*/
+#container{
+    -fx-background-image: url("/resources/imgs/bg.jpg");
+}
+
+#title{
+    -fx-padding: 50px 0 0 0;
+}
+
+#subtitle{
+    -fx-padding: 50px 0 0 0;
+}
+
+.buttonGen{
+    -fx-pref-width: 200px;
+    -fx-pref-height: 50px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-background-color: #caffec;
+}
+
+.button:hover{
+    -fx-effect: innershadow(three-pass-box, #000000, 10, 0, 0, 0);
+}
+
+#footer{
+    -fx-background-color: #2d2d2d;
+}
+
+#tooltip{
+    -fx-background-color: goldenrod;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-color: black;
+}
