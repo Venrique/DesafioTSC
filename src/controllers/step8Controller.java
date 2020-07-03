@@ -32,7 +32,7 @@ public class step8Controller {
     }
 
     public void toStep7(MouseEvent mouseEvent) throws IOException {
-        change("step8", mouseEvent);
+        change("step7", mouseEvent);
     }
 
     public void toStep8(MouseEvent mouseEvent) throws IOException {
