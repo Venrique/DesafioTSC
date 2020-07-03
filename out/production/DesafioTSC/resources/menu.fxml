@@ -23,7 +23,7 @@
                <font>
                   <Font size="14.0" />
                </font></Button>
-            <Button alignment="CENTER" mnemonicParsing="false" styleClass="buttonGen" text="Ir a un paso">
+            <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#selectStep" styleClass="buttonGen" text="Ir a un paso">
                <font>
                   <Font size="14.0" />
                </font></Button>
